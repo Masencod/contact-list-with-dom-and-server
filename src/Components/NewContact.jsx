@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 const NewContact = () => {
   const navigate = useNavigate()
     const API_URL = 'http://localhost:3000/contacts'
-    const [contact,setContact]=useState({name: '',number: ''})
+    const [contact,setContact] = useState({name: '',number: ''})
     const { name,number } = contact
 
     const handleOnChange = (e) => {
@@ -22,6 +22,7 @@ const NewContact = () => {
           console.log(data)
         } catch (error) {
           console.warn(error)
+          alert(`there was an error making your new contact : ${error}`)
         }
       }
       addContact()

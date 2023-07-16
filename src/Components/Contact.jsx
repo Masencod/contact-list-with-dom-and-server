@@ -51,7 +51,6 @@ const Contact = () => {
         const patchContact = async () => {
           try {
             const data = await axios.patch(`${API_URL}/${param.id}`, contact)
-            console.log(data)
           } catch (error) {
             console.warn(error)
             alert(`there was an error editing your contact : ${error}`)

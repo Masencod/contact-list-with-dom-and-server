@@ -19,7 +19,6 @@ const NewContact = () => {
       const addContact = async () => {
         try {
           const data = await axios.post(API_URL, contact)
-          console.log(data)
         } catch (error) {
           console.warn(error)
           alert(`there was an error making your new contact : ${error}`)

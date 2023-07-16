@@ -5,7 +5,7 @@ import axios from "axios"
 
 const ContactList = () => {
     const API_URL = 'http://localhost:3000/contacts'
-    const [contacts,setContacts]=useState({})
+    const [contacts,setContacts] = useState({})
     useEffect(() => {
         const getContacts = async ( ) => {
             try {
